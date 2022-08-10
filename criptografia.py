@@ -36,8 +36,7 @@ def decripta(texto, desloc): #funcao para decripta um texto que esta criptografa
 
     for linha in texto:
         #faz o tratamento do texto
-        linha = unidecode(linha)  #essa funcao pega os dados em unicode e tenta representar em ascii
-        linha = linha.lower()   #deixa todo texto em minusculo
+        linha = unidecode(linha).lower()   #deixa todo texto em minusculo
 
         for c in linha:
             if(c >= 'a' and c <= 'z'):  
@@ -60,10 +59,8 @@ def frequencia(texto):  #funcao para ver a frequencia de um texto no arquivo
     for x in range(26): dic[chr(97 + x)] = 0    #atribui ao dicionario todas as letras do alfabeto
 
     for linha in texto:
-
         #faz o tratamento do texto
-        linha = unidecode(linha)  #essa funcao pega os dados em unicode e tenta representar em ascii
-        linha = linha.lower()   #deixa todo texto em minusculo
+        linha = unidecode(linha).lower()   #deixa todo texto em minusculo
         
         for c in linha:
             if(c >= 'a' and c <= 'z'):  #entra no if apenas se o caracter for uma letra
